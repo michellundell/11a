@@ -15,7 +15,7 @@
 
 got it.
 
-### 2. C++ repetition linked list, std::list
+## 2. C++ repetition linked list, std::list
 
 You are familiar with linked lists in C ,-)
 ```
@@ -147,7 +147,7 @@ int main(int argc, char **argv)
 ```
 
 
-### 4. std::vector example
+## 4. std::vector example
 
 Parsing token separated strings into a std::vector
 
@@ -206,7 +206,7 @@ int main(int argc, char **argv)
 }
 ```  
 
-### 5. Repetition of getopt()
+## 5. Repetition of getopt()
 
 ```
 #include <stdio.h>
@@ -238,7 +238,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-### 6. Assignment "Lotto"
+## 6. Assignment "Lotto"
 
 Lotto is a game. 35 numbered balls are tubmled in a sphere until 11 balls exited the sphere.
 
