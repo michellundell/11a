@@ -22,38 +22,41 @@ You are familiar with linked lists in C ,-)
 ```
 /* example linked list */
 
+#include <iostream>
+using namespace std;
+
 typedef struct node {
-	/* some data */
-	Node *next;
+        /* some data */
+        struct node *next;
 } Node;
 
 int main(int argc, char **argv)
 {
-	Node *lista = NULL;
-	// lista = NULL;
+        Node *lista = NULL;
+        // lista = NULL;
 
-	Node *node0 = malloc(sizeof(Node));
-	node0->next = lista;
-	lista = node0;
-	// lista = node0,NULL
+        Node *node0 = (Node *)malloc(sizeof(Node));
+        node0->next = lista;
+        lista = node0;
+        // lista = node0,NULL
 
-	Node *node1 = malloc(sizeof(Node));
-	node1->next = lista;
-	lista = node1;
-	// lista = node1,node0,NULL
+        Node *node1 = (Node *)malloc(sizeof(Node));
+        node1->next = lista;
+        lista = node1;
+        // lista = node1,node0,NULL
 
-	Node *node2 = malloc(sizeof(Node));
-	node2->next = lista;
-	lista = node2;
-	// lista = node2,node1,node0,NULL
+        Node *node2 = (Node *)malloc(sizeof(Node));
+        node2->next = lista;
+        lista = node2;
+        // lista = node2,node1,node0,NULL
 
-	Node *node3 = malloc(sizeof(Node));
-	node3->next = lista;
-	lista = node3;
-	// lista = node3,node2,node1,node0,NULL
-
-	return 0;
+        Node *node3 = (Node *)malloc(sizeof(Node));
+        node3->next = lista;
+        lista = node3;
+        // lista = node3,node2,node1,node0,NULL
+        return 0;
 }
+
 ```
 
 U are also familiar with the C++ std::list
