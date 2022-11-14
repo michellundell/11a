@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 	lista = node0;
 	// lista = node0,NULL
 
-	Node node1 = malloc(sizeof(Node));
+	Node *node1 = malloc(sizeof(Node));
 	node1->next = lista;
 	lista = node1;
 	// lista = node1,node0,NULL
