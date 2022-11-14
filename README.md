@@ -91,7 +91,7 @@ void showlist(list<myClass *> g)
     list<myClass *>::iterator it;
 
     for (it = g.begin(); it != g.end(); ++it) {
-        cout << "  " << (*mcp)->getValue();
+        cout << "  " << (*it)->getValue();
     }
     cout << '\n';
 }
