@@ -59,7 +59,9 @@ int main(int argc, char **argv)
     std::stringstream mynums(myLot);
     std::string temp;
 
-    // Fill vectors with numbers
+    /**
+     * @brief Fill vectors with numbers
+     */
     for (int i = 0; i < 6; i++)
     {
         getline(nums, temp, ',');
@@ -82,7 +84,9 @@ int main(int argc, char **argv)
         myLuckyNums.push_back(num);
     }
 
-    // Check for matching numbers
+    /**
+     * @brief Check for matching numbers
+     */
     for (int i = 0; i < myLuckyNums.size(); i++)
     {
         for (int j = 0; j < luckyNums.size(); j++)
@@ -101,7 +105,9 @@ int main(int argc, char **argv)
         }
     }
 
-    // Show user the result
+    /**
+     * @brief Show user the result
+     */
     std::cout << lottoMatch << " + " << extraMatch << " correct numbers\n";
 
     return 0;
