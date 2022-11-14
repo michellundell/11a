@@ -7,7 +7,8 @@
 3. C++ std::stack
 4. C++ std::vector
 5. Repetition of getopt()
-6. Assignment "Lotto"
+6. Repetition of pointers
+7. Assignment "Lotto"
 
 ## 1. Self assessment
 - to big assignments
@@ -237,8 +238,52 @@ int main(int argc, char *argv[]) {
    return 0;
 }
 ```
+## 6. Repetition pointers
+```
+#include <stdio.h>
 
-## 6. Assignment "Lotto"
+int main(int argc, char **argv)
+{
+	int a = 42;
+
+	fprintf(stdout,"int a = 42; // deklaration av a som en integer med värdet 42\n");
+	fprintf(stdout,"värdet av a är %d\n",a);
+	fprintf(stdout,"a finns på stack-minnesadressen %p\n\n",&a);
+
+	int *ap;
+
+	fprintf(stdout,"int *ap; // en oinitierad pekare till integer\n");
+	fprintf(stdout,"ap pekar på minnesadressen %p (kan vara vad som helst här) \n",ap);
+	fprintf(stdout,"värdet av minnesadresssen ap pekar på är %d (*ap, kan vara vad som helst här) \n",*ap);
+	fprintf(stdout,"ap variabeln finns på stack-minnesadressen %p (&ap)\n\n",&ap);
+
+	ap = &a;
+	fprintf(stdout,"ap = &a; // ap pekar på adressen till a\n");
+	fprintf(stdout,"ap pekar på minnesadressen %p (ap, adressen till a) \n",ap);
+	fprintf(stdout,"värdet av det som ligger i minnet ap pekar på är %d (*ap)\n",*ap);
+	fprintf(stdout,"ap kommer alltid att finnas på stack-minnesadressen %p (&ap) \n",&ap);
+
+	return 0;
+}
+```
+# output from above ...
+```
+int a = 42; // deklaration av a som en integer med värdet 42
+värdet av a är 42
+a finns på stack-minnesadressen 0x7ff7b364d63c
+
+int *ap; // en oinitierad pekare till integer
+ap pekar på minnesadressen 0x7ff7b364d650 (kan vara vad som helst här) 
+värdet av minnesadresssen ap pekar på är -1285236896 (*ap, kan vara vad som helst här) 
+ap variabeln finns på stack-minnesadressen 0x7ff7b364d630 (&ap)
+
+ap = &a; // ap pekar på adressen till a
+ap pekar på minnesadressen 0x7ff7b364d63c (ap, adressen till a) 
+värdet av det som ligger i minnet ap pekar på är 42 (*ap)
+ap finns på stack-minnesadressen 0x7ff7b364d630 (&ap) 
+```
+
+## 7. Assignment "Lotto"
 
 Lotto is a game. 35 numbered balls are tubmled in a sphere until 11 balls exited the sphere.
 
