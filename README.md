@@ -157,7 +157,7 @@ For example if 5 or your numbers are among the primary numbers, and one is in th
 - 5 correct numbers. The chans is 1 in 847  to win.
 - 4 correct numbers. The chans is 1 in 59 to win.
 
-## Assignment, create a program in C++ that corrects your coupon.
+## Assignment, create a program in C++ that corrects your lotto
 ```
 lotto -c correct-lotto-numbers/extra-numbers -l my-lotto-numbers
 
